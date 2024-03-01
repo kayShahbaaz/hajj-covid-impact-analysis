@@ -1,0 +1,8 @@
+year,phase,who_allowed,age_limit,covid_requirement,international_allowed,notes
+2017,Normal,All pilgrims worldwide,None,No COVID requirement,Yes,Standard quota system 1000 per million Muslims
+2018,Normal,All pilgrims worldwide,None,No COVID requirement,Yes,Standard quota system
+2019,Pre-COVID Peak,All pilgrims worldwide,None,No COVID requirement,Yes,Peak year 2.49M highest in modern history
+2020,Strictest Lockdown,Saudi residents only,Under 65,Negative PCR test required,No,COVID vaccines not yet available. Unprecedented restriction
+2021,Locals Only,Vaccinated Saudi nationals and residents,Under 65,COVID vaccine proof required,No,Pfizer Moderna AstraZeneca Johnson and Johnson approved
+2022,Controlled Reopening,Vaccinated international pilgrims restored,Under 65,COVID vaccine proof 2 doses min 6 weeks before,Yes at 50% quota,First time internationals allowed since 2019
+2023,Near-Normal Return,All pilgrims worldwide all ages,None,COVID vaccine recommended not mandatory,Yes full quota,All restrictions officially lifted
