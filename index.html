@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hajj COVID Impact Analysis | تحليل أثر كوفيد-19 على موسم الحج</title>
+  <meta name="description" content="A 7-year data analysis of how COVID-19 restrictions reshaped Hajj pilgrimage attendance (2017–2023). By kay Shahbaaz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+Arabic:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<!-- ============ STRIPE: HEADER ============ -->
+<div class="stripe-header">
+  <div class="container">
+    <header class="header">
+      <div class="header-eyebrow">Hajj Data Project · Early 2024 Retrospective · kay Shahbaaz</div>
+      <h1 class="header-title-en">Hajj Pilgrimage: COVID-19 Impact Analysis</h1>
+      <div class="header-title-ar">تحليل أثر كوفيد-19 على موسم الحج (2017–2023)</div>
+      <p class="header-desc">
+        A 7-year data study of how the pandemic reshaped the world's largest annual gathering — attendance, policy decisions, economic impact, Makkah &amp; Madinah split, and the road to recovery.
+      </p>
+      <div class="header-desc-ar">
+        دراسة بيانات لسبع سنوات تتناول تأثير الجائحة على أكبر تجمع بشري سنوي في العالم
+      </div>
+    </header>
+  </div>
+</div>
+
+<!-- ============ STRIPE: KPI ============ -->
+<div class="stripe-kpi">
+<div class="container">
+<!-- Row 1: 2017–2020 -->
+<div class="kpi-grid kpi-grid-4">
+<div class="kpi-card phase-blue">
+<div class="kpi-year">2017 / ٢٠١٧</div>
+<div class="kpi-value" style="color:var(--blue)">2.35M</div>
+<div class="kpi-sub">Normal / طبيعي</div>
+<span class="badge badge-blue">Baseline start</span>
+</div>
+<div class="kpi-card phase-blue">
+<div class="kpi-year">2018 / ٢٠١٨</div>
+<div class="kpi-value" style="color:var(--blue)">2.37M</div>
+<div class="kpi-sub">Normal / طبيعي</div>
+<span class="badge badge-blue">+0.83% YoY</span>
+</div>
+<div class="kpi-card phase-blue">
+<div class="kpi-year">2019 / ٢٠١٩</div>
+<div class="kpi-value" style="color:var(--blue)">2.49M</div>
+<div class="kpi-sub">Pre-COVID peak / ذروة ما قبل كوفيد</div>
+<span class="badge badge-blue">Peak / الذروة</span>
+</div>
+<div class="kpi-card phase-red">
+<div class="kpi-year">2020 / ٢٠٢٠</div>
+<div class="kpi-value" style="color:var(--red)">1,000</div>
+<div class="kpi-sub">Lockdown / إغلاق</div>
+<span class="badge badge-red">−99.96%</span>
+</div>
+</div>
+<!-- Row 2: 2021–2024F -->
+<div class="kpi-grid kpi-grid-4" style="margin-top:8px;margin-bottom:2rem">
+<div class="kpi-card phase-red">
+<div class="kpi-year">2021 / ٢٠٢١</div>
+<div class="kpi-value" style="color:var(--red)">60K</div>
+<div class="kpi-sub">Locals only / محليون فقط</div>
+<span class="badge badge-red">−97.6%</span>
+</div>
+<div class="kpi-card phase-amber">
+<div class="kpi-year">2022 / ٢٠٢٢</div>
+<div class="kpi-value" style="color:var(--amber)">899K</div>
+<div class="kpi-sub">Capped / محدود</div>
+<span class="badge badge-amber">−63.9%</span>
+</div>
+<div class="kpi-card phase-green">
+<div class="kpi-year">2023 / ٢٠٢٣</div>
+<div class="kpi-value" style="color:var(--green)">1.84M</div>
+<div class="kpi-sub">Near normal / شبه طبيعي</div>
+<span class="badge badge-green">74.1% back</span>
+</div>
+<div class="kpi-card phase-teal">
+<div class="kpi-year">2024 Forecast / توقعات ٢٠٢٤</div>
+<div class="kpi-value" style="color:var(--green-dark)">~2.1M</div>
+<div class="kpi-sub">Projected / متوقع</div>
+<span class="badge badge-grey">Estimated</span>
+</div>
+</div>
+
+  </div><!-- end .container -->
+</div><!-- end .stripe-kpi -->
+
+<!-- ============ STRIPE: TABS NAV ============ -->
+<div class="stripe-tabs">
+  <div class="container">
+  <!-- ============ TABS ============ -->
+  <div class="tab-row" role="tablist">
+    <button class="tab-btn active" data-tab="overview"  role="tab">Overview / نظرة عامة</button>
+    <button class="tab-btn"        data-tab="policy"    role="tab">Policy / السياسات</button>
+    <button class="tab-btn"        data-tab="cities"    role="tab">Cities / المدن</button>
+    <button class="tab-btn"        data-tab="countries" role="tab">Countries / الدول</button>
+    <button class="tab-btn"        data-tab="economic"  role="tab">Economic / الاقتصاد</button>
+    <button class="tab-btn"        data-tab="safety"    role="tab">Safety / السلامة</button>
+    <button class="tab-btn"        data-tab="forecast"  role="tab">2024 Forecast / توقعات ٢٠٢٤</button>
+  </div>
+
+  </div><!-- end .container -->
+</div><!-- end .stripe-tabs -->
+
+<!-- ============ STRIPE: CONTENT ============ -->
+<div class="stripe-content">
+  <div class="container">
+
+  <!-- ===================================================== -->
+  <!-- TAB: OVERVIEW                                         -->
+  <!-- ===================================================== -->
+  <div class="tab-panel active" id="tab-overview">
+
+    <div class="section-label">
+      <div class="section-label-en">7-Year Attendance</div>
+      <div class="section-label-ar">الحضور على مدى ٧ سنوات</div>
+    </div>
+    <div class="legend">
+      <span class="legend-item"><span class="legend-sq" style="background:var(--blue)"></span>Normal / طبيعي</span>
+      <span class="legend-item"><span class="legend-sq" style="background:var(--red)"></span>Lockdown / إغلاق</span>
+      <span class="legend-item"><span class="legend-sq" style="background:var(--amber)"></span>Reopening / إعادة فتح</span>
+      <span class="legend-item"><span class="legend-sq" style="background:var(--green)"></span>Recovery / تعافٍ</span>
+      <span class="legend-item"><span class="legend-sq" style="background:var(--grey-bar)"></span>Forecast / توقع</span>
+      <span class="legend-item"><span class="legend-sq-dash"></span>2019 baseline</span>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="chartAttendance"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Recovery Trajectory — % of 2019 Baseline</div>
+      <div class="section-label-ar">مسار التعافي — نسبة من مستوى ٢٠١٩</div>
+    </div>
+    <div class="chart-wrap-sm">
+      <canvas id="chartRecovery"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Year-on-Year Change %</div>
+      <div class="section-label-ar">التغيير من سنة لأخرى %</div>
+    </div>
+    <div class="chart-wrap-sm">
+      <canvas id="chartYoY"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Key Insights / الرؤى الرئيسية</div>
+      <div class="section-label-ar"></div>
+    </div>
+
+    <div class="insight-box" style="border-color:var(--blue)">
+      <strong>2017–2019: Steady Growth / نمو مستمر</strong>
+      Pre-COVID Hajj was growing year on year. The 2019 peak of 2.49M became the baseline for all recovery calculations in this project.
+      <div class="ar">كان موسم الحج في تنامٍ مستمر قبل الجائحة. وقد أصبح رقم عام 2019 البالغ 2.49 مليون هو المرجع لقياس التعافي.</div>
+    </div>
+    <div class="insight-box" style="border-color:var(--red)">
+      <strong>2020: 99.96% Drop / انخفاض بنسبة ٩٩.٩٦٪</strong>
+      Only 1,000 Saudi residents were allowed — the most restricted Hajj in modern history. No international pilgrims. No vaccines available yet. An unprecedented decision.
+      <div class="ar">لم يُسمح إلا لـ 1,000 من المقيمين السعوديين. أشد قيود في تاريخ موسم الحج الحديث.</div>
+    </div>
+    <div class="insight-box" style="border-color:var(--amber)">
+      <strong>2021–2022: Staged Return / عودة تدريجية</strong>
+      The Saudi government's phased approach is visible in the data — 60K locals in 2021, 899K capped international return in 2022. Each step was deliberate.
+      <div class="ar">النهج المرحلي للحكومة السعودية واضح في البيانات — 60 ألفاً محلياً عام 2021، ثم 899 ألفاً عام 2022.</div>
+    </div>
+    <div class="insight-box" style="border-color:var(--green)">
+      <strong>2023: 74.1% Recovered / تعافٍ بنسبة ٧٤.١٪</strong>
+      All restrictions lifted. 1.84M pilgrims — the largest since COVID. Still 26% below 2019 but the trajectory points clearly to full recovery in 2024.
+      <div class="ar">رُفعت جميع القيود. 1.84 مليون حاج — الأكبر منذ الجائحة. المسار يشير إلى تعافٍ كامل عام 2024.</div>
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TAB: POLICY TIMELINE                                  -->
+  <!-- ===================================================== -->
+  <div class="tab-panel" id="tab-policy">
+
+    <div class="section-label">
+      <div class="section-label-en">COVID Policy by Year — Click to Expand</div>
+      <div class="section-label-ar">سياسات كوفيد حسب السنة — انقر للتوسيع</div>
+    </div>
+
+    <div id="timeline-container"></div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TAB: CITIES                                           -->
+  <!-- ===================================================== -->
+  <div class="tab-panel" id="tab-cities">
+
+    <div class="section-label">
+      <div class="section-label-en">Makkah vs Madinah Visitors</div>
+      <div class="section-label-ar">زوار مكة المكرمة مقابل المدينة المنورة</div>
+    </div>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:1rem;line-height:1.7">
+      Makkah hosts the Hajj rituals. Madinah receives pilgrims for Ziyarat (The Beloved Prophet's ﷺ visit) — typically ~82% of the Makkah figure. During the lockdown years, Madinah visits dropped to near zero.
+      <span style="font-family:var(--font-arabic);font-size:12px;color:var(--text-tertiary);display:block;direction:rtl;text-align:left;margin-top:4px">مكة المكرمة تستضيف شعائر الحج. المدينة المنورة تستقبل الحجاج للزيارة — عادةً ما يعادل ~٨٢٪ من حضور مكة.</span>
+    </p>
+    <div class="legend">
+      <span class="legend-item"><span class="legend-sq" style="background:var(--blue)"></span>Makkah / مكة المكرمة</span>
+      <span class="legend-item"><span class="legend-sq" style="background:#9FE1CB"></span>Madinah (est.) / المدينة المنورة (تقدير)</span>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="chartCities"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Internal (Saudi) vs International Pilgrims</div>
+      <div class="section-label-ar">الحجاج الداخليون (السعوديون) مقابل الدوليين</div>
+    </div>
+    <div class="legend">
+      <span class="legend-item"><span class="legend-sq" style="background:var(--blue)"></span>International / دوليون</span>
+      <span class="legend-item"><span class="legend-sq" style="background:var(--amber)"></span>Saudi internal / داخليون سعوديون</span>
+    </div>
+    <div class="chart-wrap-sm">
+      <canvas id="chartIntExt"></canvas>
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TAB: COUNTRIES                                        -->
+  <!-- ===================================================== -->
+  <div class="tab-panel" id="tab-countries">
+
+    <div class="section-label">
+      <div class="section-label-en">Top Pilgrim-Sending Countries by Year</div>
+      <div class="section-label-ar">أكثر الدول في إرسال الحجاج — حسب السنة</div>
+    </div>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:1rem;line-height:1.7">
+      Saudi Arabia allocates roughly 1,000 Hajj permits per 1 million Muslims in each country. Select a year to see how the distribution changed — especially during the COVID restrictions of 2020 and 2021.
+      <span style="font-family:var(--font-arabic);font-size:12px;color:var(--text-tertiary);display:block;direction:rtl;text-align:left;margin-top:4px">تخصص المملكة نحو 1,000 تأشيرة لكل مليون مسلم. اختر سنة لترى كيف تغير التوزيع خلال قيود كوفيد.</span>
+    </p>
+
+    <!-- Year selector -->
+    <div class="tab-row" style="margin-bottom:1.25rem" id="country-year-btns">
+      <button class="tab-btn active" data-cyear="2017">2017</button>
+      <button class="tab-btn" data-cyear="2018">2018</button>
+      <button class="tab-btn" data-cyear="2019">2019</button>
+      <button class="tab-btn" data-cyear="2020">2020</button>
+      <button class="tab-btn" data-cyear="2021">2021</button>
+      <button class="tab-btn" data-cyear="2022">2022</button>
+      <button class="tab-btn" data-cyear="2023">2023</button>
+    </div>
+
+    <!-- Context note per year -->
+    <div id="country-year-note" style="font-size:12px;color:var(--text-tertiary);margin-bottom:1rem;padding:8px 12px;background:var(--bg-card);border-radius:var(--radius-sm);border:0.5px solid var(--border-light)"></div>
+
+    <div id="countries-container"></div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Regional Composition / التوزيع الإقليمي</div>
+      <div class="section-label-ar"></div>
+    </div>
+    <div class="region-grid" id="region-grid"></div>
+
+    <div class="insight-box" style="border-color:var(--amber);margin-top:1rem">
+      <strong>Quota system during COVID / نظام الحصص خلال كوفيد</strong>
+      In 2020–2021, all international quotas were suspended entirely. In 2022, they were restored at ~50%. Only vaccinated pilgrims under 65 qualified. By 2023, full quotas were reinstated with no age restrictions.
+      <div class="ar">تم تعليق جميع الحصص الدولية عامَي 2020 و2021. استُعيد 50% منها عام 2022. عام 2023 استُعيدت الحصص كاملةً.</div>
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TAB: ECONOMIC                                         -->
+  <!-- ===================================================== -->
+  <div class="tab-panel" id="tab-economic">
+
+    <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.5rem">
+      <div class="kpi-card">
+        <div class="kpi-year">Normal annual / سنوي طبيعي</div>
+        <div class="kpi-value" style="color:var(--green)">$12B</div>
+        <div class="kpi-sub">Hajj + Umrah combined</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-year">2020 estimated loss / خسارة ٢٠٢٠</div>
+        <div class="kpi-value" style="color:var(--red)">~$11.9B</div>
+        <div class="kpi-sub">vs 2019 baseline</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-year">Vision 2030 target / هدف رؤية ٢٠٣٠</div>
+        <div class="kpi-value" style="color:var(--blue)">$350B</div>
+        <div class="kpi-sub">By 2032 projection</div>
+      </div>
+    </div>
+
+    <div class="section-label">
+      <div class="section-label-en">Estimated Hajj Season Revenue (USD Billion)</div>
+      <div class="section-label-ar">الإيرادات التقديرية لموسم الحج (مليار دولار)</div>
+    </div>
+    <div class="chart-wrap-sm">
+      <canvas id="chartRevenue"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Jobs Supported by Hajj Season</div>
+      <div class="section-label-ar">الوظائف المدعومة بموسم الحج</div>
+    </div>
+    <div class="chart-wrap-sm">
+      <canvas id="chartJobs"></canvas>
+    </div>
+
+    <div class="insight-box" style="border-color:var(--green);margin-top:0.5rem">
+      <strong>Economic recovery ahead of attendance / التعافي الاقتصادي يسبق الحضور</strong>
+      By 2023, revenue (~$10.5B) had reached ~87.5% of the 2019 level — while attendance was only at 74.1%. International pilgrims spend more per person than domestic ones, and Saudi infrastructure was upgraded during the pandemic years.
+      <div class="ar">عام 2023، بلغت الإيرادات ~87.5% من مستوى 2019 بينما الحضور كان 74.1% فقط. الحجاج الدوليون ينفقون أكثر من المحليين.</div>
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TAB: SAFETY                                           -->
+  <!-- ===================================================== -->
+  <div class="tab-panel" id="tab-safety">
+
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:1.25rem;line-height:1.7">
+      Pilgrims who pass away during Hajj are considered to have died in a blessed state of worship — this is a great honour. From a data perspective, deaths do occur each year due to extreme heat, the physically demanding rituals, and the scale of the gathering. The 2020–2021 zeros reflect tiny crowd sizes, not improved safety. The 2023 spike is primarily heat-related.
+      <span style="font-family:var(--font-arabic);font-size:12px;color:var(--text-tertiary);display:block;direction:rtl;text-align:left;margin-top:4px">الوفيات واقع سنوي مؤسف في موسم الحج بسبب الحرارة الشديدة. أصفار 2020-2021 تعكس صغر حجم الحشد لا تحسن السلامة.</span>
+    </p>
+
+    <div class="section-label">
+      <div class="section-label-en">Reported Deaths per Year / الوفيات المُبلَّغ عنها سنوياً</div>
+    </div>
+    <div class="chart-wrap-sm">
+      <canvas id="chartDeaths"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Deaths per 100,000 Pilgrims / الوفيات لكل ١٠٠,٠٠٠ حاج</div>
+      <div class="section-label-ar"></div>
+    </div>
+    <div class="chart-wrap-sm">
+      <canvas id="chartDeathsRate"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div id="deaths-rows-container"></div>
+
+    <div class="insight-box" style="border-color:var(--red);margin-top:0.75rem">
+      <strong>2023 Heat Risk / خطر الحرارة ٢٠٢٣</strong>
+      Pilgrims who pass away during Hajj are honoured in as having died in worship. From a safety management perspective, the 2023 rate of 13.02 per 100K is roughly 8× higher than the pre-COVID average of ~1.5 per 100K — driven largely by extreme heat. Temperatures in Makkah are rising ~0.4°C per decade. The deadliest single incident in Hajj history was the 2015 Mina stampede — estimated 2,400+ deaths.
+      <div class="ar">معدل الوفيات عام 2023 أعلى بـ 8 أضعاف من متوسط ما قبل كوفيد. درجات الحرارة في مكة ترتفع ~0.4°م لكل عقد.</div>
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TAB: 2024 FORECAST                                    -->
+  <!-- ===================================================== -->
+  <div class="tab-panel" id="tab-forecast">
+
+    <div class="forecast-note">
+      <div class="label">Project context — Early 2024 / سياق المشروع — مطلع ٢٠٢٤</div>
+      The projection below is based on the 2021–2023 recovery trajectory and the full lifting of COVID restrictions. The 2023 figure of 1.84M (74.1% of 2019) is the strongest signal yet that full recovery is imminent.
+      <div style="font-family:var(--font-arabic);font-size:12px;color:var(--text-tertiary);direction:rtl;text-align:left;margin-top:6px">أُنجز هذا المشروع في مطلع 2024، قبل موسم الحج. التوقع مبني على مسار تعافي 2021-2023 ورفع القيود كلياً.</div>
+    </div>
+
+    <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:1.5rem">
+      <div class="kpi-card">
+        <div class="kpi-year">2023 Actual / الفعلي</div>
+        <div class="kpi-value" style="color:var(--green)">1.84M</div>
+        <div class="kpi-sub">74.1% of 2019</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-year">2024 Low estimate</div>
+        <div class="kpi-value" style="color:var(--text-secondary)">1.9M</div>
+        <div class="kpi-sub">Conservative</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-year">2024 Point estimate</div>
+        <div class="kpi-value" style="color:var(--green-dark)">~2.1M</div>
+        <div class="kpi-sub">Mid-range</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-year">2024 High estimate</div>
+        <div class="kpi-value" style="color:var(--text-secondary)">2.3M</div>
+        <div class="kpi-sub">Optimistic</div>
+      </div>
+    </div>
+
+    <div class="section-label">
+      <div class="section-label-en">Full Recovery Arc with 2024 Forecast Band</div>
+      <div class="section-label-ar">مسار التعافي الكامل مع نطاق توقعات ٢٠٢٤</div>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="chartForecast"></canvas>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">
+      <div class="section-label-en">Factors Behind the Forecast / العوامل الداعمة للتوقع</div>
+    </div>
+
+    <div class="forecast-factors">
+      <div class="factor-row"><div class="factor-dot" style="background:var(--green)"></div><span>All COVID restrictions fully lifted — no age caps, no vaccine mandates / رُفعت جميع قيود كوفيد كلياً</span></div>
+      <div class="factor-row"><div class="factor-dot" style="background:var(--green)"></div><span>Massive pent-up demand — millions were unable to attend 2020–2022 / طلب مكبوت ضخم بعد عامَي الحظر</span></div>
+      <div class="factor-row"><div class="factor-dot" style="background:var(--green)"></div><span>Saudi Vision 2030 actively expanding Hajj infrastructure and capacity / رؤية 2030 تُوسّع البنية التحتية للحج</span></div>
+      <div class="factor-row"><div class="factor-dot" style="background:var(--green)"></div><span>Masjid al-Haram expansion ($21B project) increasing physical capacity / مشروع توسعة المسجد الحرام بـ 21 مليار دولار</span></div>
+      <div class="factor-row"><div class="factor-dot" style="background:var(--amber)"></div><span>Heat risk remains — 2023's 240 deaths may affect elderly pilgrim applications / مخاطر الحرارة قد تؤثر على تقديمات كبار السن</span></div>
+      <div class="factor-row"><div class="factor-dot" style="background:var(--amber)"></div><span>Visa and logistics backlogs in some countries may slow full quota fill / تراكم التأشيرات قد يُبطئ اكتمال الحصص</span></div>
+      <div class="factor-row"><div class="factor-dot" style="background:var(--blue)"></div><span>Full 2019 baseline recovery (~2.49M) expected by 2024–2025 / التعافي الكامل لمستوى 2019 متوقع بحلول 2024-2025</span></div>
+    </div>
+
+  </div>
+
+  </div><!-- end .container -->
+</div><!-- end .stripe-content -->
+
+<!-- ============ STRIPE: FOOTER ============ -->
+<div class="stripe-footer">
+  <div class="container">
+    <footer class="footer">
+      <p><strong>Sources / المصادر:</strong> GASTAT (gastat.gov.sa) · Saudi Ministry of Hajj and Umrah (haj.gov.sa) · CDC Yellow Book · Arab News · Al Jazeera · AFP · PBS NewsHour · Halal Times</p>
+      <p style="margin-top:4px">Author / المؤلف: <strong>kay Shahbaaz / خ شهباز</strong> · <a href="https://github.com/kayShahbaaz/hajj-covid-impact-analysis" style="color:var(--blue);text-decoration:none">GitHub</a> · <a href="https://www.linkedin.com/in/kayshahbaaz/" style="color:var(--blue);text-decoration:none">LinkedIn</a></p>
+      <div class="footer-ar" style="margin-top:8px;font-size:10px">© 2024 kay Shahbaaz. All rights reserved</div>
+    </footer>
+  </div>
+</div><!-- end .stripe-footer -->
+
+<!-- Chart.js v4.4.1 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+const YEARS        = ['2017','2018','2019','2020','2021','2022','2023'];
+const YEARS_FULL   = ['2017','2018','2019','2020','2021','2022','2023','2024F'];
+const PILGRIMS     = [2352122, 2371675, 2489406, 1000, 60000, 899353, 1845045];
+const PILGRIMS_F   = [2352122, 2371675, 2489406, 1000, 60000, 899353, 1845045, 2100000];
+const INTERNAL     = [612000, 612953, 634379, 1000, 60000, 119434, 221854];
+const EXTERNAL     = [1740122, 1758722, 1855027, 0, 0, 779919, 1611310];
+const MADINAH_EST  = [1929040, 1945013, 2041312, 0, 44700, 737669, 1512937];
+const BASELINE     = 2489406;
+
+const BAR_COLORS = [
+  '#378ADD','#378ADD','#378ADD',
+  '#E24B4A','#E24B4A',
+  '#EF9F27',
+  '#1D9E75',
+  '#B4B2A9'
+];
+
+const RECOVERY = PILGRIMS.map(p => Math.round(p / BASELINE * 1000) / 10);
+const RECOVERY_F = [...RECOVERY, Math.round(2100000 / BASELINE * 1000) / 10];
+
+const YOY = PILGRIMS.map((p, i) => {
+  if (i === 0) return null;
+  return Math.round((p - PILGRIMS[i-1]) / PILGRIMS[i-1] * 1000) / 10;
+});
+
+const REVENUE    = [8.5, 9.0, 12.0, 0.1, 0.8, 5.2, 10.5];
+const JOBS       = [280000, 290000, 350000, 15000, 40000, 236897, 350000];
+const DEATHS     = [35, 31, 42, 0, 0, 15, 240];
+const DEATHS_RATE = PILGRIMS.map((p,i) => p === 0 ? 0 : Math.round(DEATHS[i] / p * 100000 * 100) / 100);
+
+const POLICY_DATA = [
+  { year:'2017', phase:'Normal / طبيعي',            color:'#1D9E75',
+    who:'All pilgrims worldwide / جميع الحجاج حول العالم',
+    age:'None / لا يوجد', vax:'Meningitis ACYW (standard) / المكورات السحائية', intl:'Yes / نعم', cap:'~2.35M' },
+  { year:'2018', phase:'Normal / طبيعي',            color:'#1D9E75',
+    who:'All pilgrims worldwide / جميع الحجاج حول العالم',
+    age:'None / لا يوجد', vax:'Meningitis ACYW (standard) / المكورات السحائية', intl:'Yes / نعم', cap:'~2.37M' },
+  { year:'2019', phase:'Pre-COVID Peak / ذروة ما قبل كوفيد', color:'#378ADD',
+    who:'All pilgrims worldwide / جميع الحجاج حول العالم',
+    age:'None / لا يوجد', vax:'Meningitis ACYW (standard) / المكورات السحائية', intl:'Yes / نعم', cap:'No cap / لا يوجد سقف' },
+  { year:'2020', phase:'Strictest Lockdown / أشد القيود',    color:'#E24B4A',
+    who:'Saudi residents only / المقيمون السعوديون فقط',
+    age:'Under 65 / أقل من 65', vax:'Negative PCR required — no COVID vaccine yet / PCR سلبي مطلوب', intl:'No / لا', cap:'~1,000' },
+  { year:'2021', phase:'Locals Only / محليون فقط',           color:'#E24B4A',
+    who:'Vaccinated Saudi nationals & residents / المواطنون والمقيمون السعوديون الملقحون',
+    age:'Under 65 / أقل من 65', vax:'COVID vaccine required (Pfizer, Moderna, AZ, J&J) / لقاح كوفيد مطلوب', intl:'No / لا', cap:'60,000' },
+  { year:'2022', phase:'Controlled Reopening / إعادة فتح منضبط', color:'#EF9F27',
+    who:'Vaccinated internationals restored at 50% quota / الدوليون الملقحون بـ 50% من الحصص',
+    age:'Under 65 / أقل من 65', vax:'2 doses min 6 weeks before Hajj / جرعتان قبل الحج بـ 6 أسابيع على الأقل', intl:'Yes, 50% quota / نعم، 50% حصة', cap:'1,000,000' },
+  { year:'2023', phase:'Near-Normal Return / عودة شبه طبيعية',  color:'#639922',
+    who:'All pilgrims worldwide / جميع الحجاج حول العالم',
+    age:'None / لا يوجد', vax:'Recommended not mandatory / موصى به وليس إلزامياً', intl:'Yes, full quota / نعم، الحصة كاملة', cap:'No cap / لا يوجد سقف' },
+  { year:'2024F', phase:'Full Recovery (Forecast) / تعافٍ كامل (توقع)', color:'#0F6E56',
+    who:'All pilgrims worldwide / جميع الحجاج حول العالم',
+    age:'None / لا يوجد', vax:'COVID vaccine for high-risk groups / للفئات عالية الخطورة', intl:'Yes, full quota / نعم', cap:'~2.1M projected / متوقع' },
+];
+
+// Countries data per year
+// 2020 & 2021: international suspended — only Saudi internal shown
+// 2022: international restored at ~50% quota
+const COUNTRIES_BY_YEAR = {
+  '2017': [
+    { rank:1,  flag:'🇮🇩', en:'Indonesia',  ar:'إندونيسيا', n:221000, color:'#378ADD' },
+    { rank:2,  flag:'🇵🇰', en:'Pakistan',   ar:'باكستان',   n:179210, color:'#1D9E75' },
+    { rank:3,  flag:'🇮🇳', en:'India',      ar:'الهند',     n:170000, color:'#1D9E75' },
+    { rank:4,  flag:'🇧🇩', en:'Bangladesh', ar:'بنغلاديش',  n:127198, color:'#1D9E75' },
+    { rank:5,  flag:'🇪🇬', en:'Egypt',      ar:'مصر',       n:108000, color:'#EF9F27' },
+    { rank:6,  flag:'🇮🇷', en:'Iran',       ar:'إيران',     n:86500,  color:'#E24B4A' },
+    { rank:7,  flag:'🇳🇬', en:'Nigeria',    ar:'نيجيريا',   n:79000,  color:'#B4B2A9' },
+    { rank:8,  flag:'🇹🇷', en:'Turkey',     ar:'تركيا',     n:79000,  color:'#E24B4A' },
+    { rank:9,  flag:'🇩🇿', en:'Algeria',    ar:'الجزائر',   n:36000,  color:'#B4B2A9' },
+    { rank:10, flag:'🇲🇦', en:'Morocco',    ar:'المغرب',    n:31000,  color:'#B4B2A9' },
+  ],
+  '2018': [
+    { rank:1,  flag:'🇮🇩', en:'Indonesia',  ar:'إندونيسيا', n:221000, color:'#378ADD' },
+    { rank:2,  flag:'🇵🇰', en:'Pakistan',   ar:'باكستان',   n:179210, color:'#1D9E75' },
+    { rank:3,  flag:'🇮🇳', en:'India',      ar:'الهند',     n:170000, color:'#1D9E75' },
+    { rank:4,  flag:'🇧🇩', en:'Bangladesh', ar:'بنغلاديش',  n:127198, color:'#1D9E75' },
+    { rank:5,  flag:'🇪🇬', en:'Egypt',      ar:'مصر',       n:108000, color:'#EF9F27' },
+    { rank:6,  flag:'🇮🇷', en:'Iran',       ar:'إيران',     n:87000,  color:'#E24B4A' },
+    { rank:7,  flag:'🇳🇬', en:'Nigeria',    ar:'نيجيريا',   n:80000,  color:'#B4B2A9' },
+    { rank:8,  flag:'🇹🇷', en:'Turkey',     ar:'تركيا',     n:79000,  color:'#E24B4A' },
+    { rank:9,  flag:'🇩🇿', en:'Algeria',    ar:'الجزائر',   n:36500,  color:'#B4B2A9' },
+    { rank:10, flag:'🇲🇦', en:'Morocco',    ar:'المغرب',    n:31500,  color:'#B4B2A9' },
+  ],
+  '2019': [
+    { rank:1,  flag:'🇮🇩', en:'Indonesia',  ar:'إندونيسيا', n:221000, color:'#378ADD' },
+    { rank:2,  flag:'🇵🇰', en:'Pakistan',   ar:'باكستان',   n:184210, color:'#1D9E75' },
+    { rank:3,  flag:'🇮🇳', en:'India',      ar:'الهند',     n:175025, color:'#1D9E75' },
+    { rank:4,  flag:'🇧🇩', en:'Bangladesh', ar:'بنغلاديش',  n:127198, color:'#1D9E75' },
+    { rank:5,  flag:'🇪🇬', en:'Egypt',      ar:'مصر',       n:108000, color:'#EF9F27' },
+    { rank:6,  flag:'🇮🇷', en:'Iran',       ar:'إيران',     n:87500,  color:'#E24B4A' },
+    { rank:7,  flag:'🇳🇬', en:'Nigeria',    ar:'نيجيريا',   n:82000,  color:'#B4B2A9' },
+    { rank:8,  flag:'🇹🇷', en:'Turkey',     ar:'تركيا',     n:79000,  color:'#E24B4A' },
+    { rank:9,  flag:'🇩🇿', en:'Algeria',    ar:'الجزائر',   n:36000,  color:'#B4B2A9' },
+    { rank:10, flag:'🇲🇦', en:'Morocco',    ar:'المغرب',    n:31000,  color:'#B4B2A9' },
+  ],
+  '2020': [
+    { rank:1,  flag:'🇸🇦', en:'Saudi Arabia (residents)', ar:'المملكة العربية السعودية', n:1000, color:'#E24B4A' },
+  ],
+  '2021': [
+    { rank:1,  flag:'🇸🇦', en:'Saudi Arabia (nationals)', ar:'المواطنون السعوديون', n:60000, color:'#E24B4A' },
+  ],
+  '2022': [
+    { rank:1,  flag:'🇮🇩', en:'Indonesia',  ar:'إندونيسيا', n:100051, color:'#378ADD' },
+    { rank:2,  flag:'🇵🇰', en:'Pakistan',   ar:'باكستان',   n:81132,  color:'#1D9E75' },
+    { rank:3,  flag:'🇮🇳', en:'India',      ar:'الهند',     n:79237,  color:'#1D9E75' },
+    { rank:4,  flag:'🇧🇩', en:'Bangladesh', ar:'بنغلاديش',  n:57585,  color:'#1D9E75' },
+    { rank:5,  flag:'🇪🇬', en:'Egypt',      ar:'مصر',       n:49898,  color:'#EF9F27' },
+    { rank:6,  flag:'🇮🇷', en:'Iran',       ar:'إيران',     n:39234,  color:'#E24B4A' },
+    { rank:7,  flag:'🇳🇬', en:'Nigeria',    ar:'نيجيريا',   n:43782,  color:'#B4B2A9' },
+    { rank:8,  flag:'🇹🇷', en:'Turkey',     ar:'تركيا',     n:35743,  color:'#E24B4A' },
+    { rank:9,  flag:'🇩🇿', en:'Algeria',    ar:'الجزائر',   n:15876,  color:'#B4B2A9' },
+    { rank:10, flag:'🇲🇦', en:'Morocco',    ar:'المغرب',    n:14500,  color:'#B4B2A9' },
+  ],
+  '2023': [
+    { rank:1,  flag:'🇮🇩', en:'Indonesia',  ar:'إندونيسيا', n:221000, color:'#378ADD' },
+    { rank:2,  flag:'🇵🇰', en:'Pakistan',   ar:'باكستان',   n:179210, color:'#1D9E75' },
+    { rank:3,  flag:'🇮🇳', en:'India',      ar:'الهند',     n:175000, color:'#1D9E75' },
+    { rank:4,  flag:'🇧🇩', en:'Bangladesh', ar:'بنغلاديش',  n:127000, color:'#1D9E75' },
+    { rank:5,  flag:'🇪🇬', en:'Egypt',      ar:'مصر',       n:108000, color:'#EF9F27' },
+    { rank:6,  flag:'🇳🇬', en:'Nigeria',    ar:'نيجيريا',   n:95000,  color:'#B4B2A9' },
+    { rank:7,  flag:'🇮🇷', en:'Iran',       ar:'إيران',     n:87500,  color:'#E24B4A' },
+    { rank:8,  flag:'🇹🇷', en:'Turkey',     ar:'تركيا',     n:79000,  color:'#E24B4A' },
+    { rank:9,  flag:'🇩🇿', en:'Algeria',    ar:'الجزائر',   n:36000,  color:'#B4B2A9' },
+    { rank:10, flag:'🇲🇦', en:'Morocco',    ar:'المغرب',    n:31000,  color:'#B4B2A9' },
+  ],
+};
+
+const REGIONS_DATA = [
+  { en:'South Asia',     ar:'جنوب آسيا',   pct:34, color:'#1D9E75' },
+  { en:'SE Asia',        ar:'جنوب شرق آسيا', pct:22, color:'#378ADD' },
+  { en:'Arab',           ar:'عربي',         pct:22, color:'#EF9F27' },
+  { en:'Middle East',    ar:'الشرق الأوسط', pct:11, color:'#E24B4A' },
+  { en:'Africa',         ar:'أفريقيا',      pct:7,  color:'#B4B2A9' },
+  { en:'Other',          ar:'أخرى',         pct:4,  color:'#888780' },
+];
+
+const DEATHS_INFO = [
+  { year:'2017', deaths:35,  cause:'Natural causes / heat', note:'No major incidents' },
+  { year:'2018', deaths:31,  cause:'Natural causes',        note:'Quiet year' },
+  { year:'2019', deaths:42,  cause:'Natural causes / heat', note:'Pre-COVID peak year' },
+  { year:'2020', deaths:0,   cause:'N/A',                   note:'Controlled bubble — 1,000 pilgrims' },
+  { year:'2021', deaths:0,   cause:'N/A',                   note:'Zero incidents — tightly managed' },
+  { year:'2022', deaths:15,  cause:'Natural causes',        note:'Controlled reopening environment' },
+  { year:'2023', deaths:240, cause:'Heat / natural causes', note:'Mainly Indonesian pilgrims — growing heat concern' },
+];
+
+// ============================================================
+// HELPERS
+// ============================================================
+const fmt = n => {
+  if (n >= 1000000) return (n/1000000).toFixed(2)+'M';
+  if (n >= 1000)    return (n/1000).toFixed(0)+'K';
+  return n.toLocaleString();
+};
+
+const isDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+const gridColor  = () => isDark() ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+const tickColor  = () => isDark() ? '#7A7975' : '#888780';
+const baselineColor = '#888780';
+
+const tooltipPlugin = {
+  callbacks: {
+    label: ctx => {
+      const v = ctx.raw;
+      if (v === null || v === undefined) return '';
+      if (typeof v === 'number' && Math.abs(v) >= 1000) return ' ' + fmt(Math.round(v));
+      return ' ' + v;
+    }
+  }
+};
+
+Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+Chart.defaults.plugins.legend.display = false;
+
+// ============================================================
+// CHART 1 — Attendance bar
+// ============================================================
+new Chart(document.getElementById('chartAttendance'), {
+  type: 'bar',
+  data: {
+    labels: YEARS_FULL,
+    datasets: [
+      {
+        label: 'Pilgrims / الحجاج',
+        data: PILGRIMS_F,
+        backgroundColor: BAR_COLORS,
+        borderRadius: 4,
+        borderSkipped: false,
+      },
+      {
+        label: '2019 baseline',
+        data: Array(8).fill(BASELINE),
+        type: 'line',
+        borderColor: baselineColor,
+        borderDash: [5, 4],
+        borderWidth: 1.5,
+        pointRadius: 0,
+        fill: false,
+        order: 0,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.datasetIndex === 0
+            ? ' ' + fmt(ctx.raw) + ' pilgrims'
+            : ' 2019 baseline: ' + fmt(BASELINE)
+        }
+      }
+    },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: {
+        grid: { color: gridColor() },
+        ticks: { color: tickColor(), callback: v => fmt(v) }
+      }
+    }
+  }
+});
+
+// ============================================================
+// CHART 2 — Recovery line
+// ============================================================
+new Chart(document.getElementById('chartRecovery'), {
+  type: 'line',
+  data: {
+    labels: YEARS_FULL,
+    datasets: [
+      {
+        label: '% of 2019',
+        data: RECOVERY,
+        borderColor: '#1D9E75',
+        backgroundColor: 'rgba(29,158,117,0.08)',
+        fill: true,
+        tension: 0.35,
+        borderWidth: 2.5,
+        pointRadius: 5,
+        pointBackgroundColor: '#1D9E75',
+      },
+      {
+        label: '2024 Forecast',
+        data: [null,null,null,null,null,null,RECOVERY[6], RECOVERY_F[7]],
+        borderColor: '#B4B2A9',
+        borderDash: [5,4],
+        fill: false,
+        tension: 0.35,
+        borderWidth: 2,
+        pointRadius: 5,
+        pointBackgroundColor: '#B4B2A9',
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ctx.raw != null ? ' ' + ctx.raw + '% of 2019' : '' } } },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: {
+        min: 0, max: 115,
+        grid: { color: gridColor() },
+        ticks: { color: tickColor(), callback: v => v + '%' }
+      }
+    }
+  }
+});
+
+// ============================================================
+// CHART 3 — Year-on-Year
+// ============================================================
+new Chart(document.getElementById('chartYoY'), {
+  type: 'bar',
+  data: {
+    labels: ['2017→18','2018→19','2019→20','2020→21','2021→22','2022→23'],
+    datasets: [{
+      label: 'YoY %',
+      data: YOY.slice(1),
+      backgroundColor: YOY.slice(1).map(v => v < 0 ? '#E24B4A' : '#1D9E75'),
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ' ' + (ctx.raw > 0 ? '+' : '') + ctx.raw + '%' } } },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor(), font: { size: 11 } } },
+      y: {
+        grid: { color: gridColor() },
+        ticks: { color: tickColor(), callback: v => (v > 0 ? '+' : '') + v + '%' }
+      }
+    }
+  }
+});
+
+// ============================================================
+// CHART 4 — Cities
+// ============================================================
+new Chart(document.getElementById('chartCities'), {
+  type: 'bar',
+  data: {
+    labels: YEARS,
+    datasets: [
+      { label: 'Makkah / مكة',        data: PILGRIMS, backgroundColor: '#378ADD', borderRadius: 4, borderSkipped: false },
+      { label: 'Madinah est. / المدينة', data: MADINAH_EST, backgroundColor: '#9FE1CB', borderRadius: 4, borderSkipped: false },
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: tooltipPlugin },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: { grid: { color: gridColor() }, ticks: { color: tickColor(), callback: v => fmt(v) } }
+    }
+  }
+});
+
+// ============================================================
+// CHART 5 — Internal vs External (stacked)
+// ============================================================
+new Chart(document.getElementById('chartIntExt'), {
+  type: 'bar',
+  data: {
+    labels: YEARS,
+    datasets: [
+      { label: 'International / دوليون', data: EXTERNAL, backgroundColor: '#378ADD', borderRadius: [4,4,0,0], borderSkipped: false, stack: 'a' },
+      { label: 'Saudi internal / داخليون', data: INTERNAL, backgroundColor: '#EF9F27', borderSkipped: false, stack: 'a' },
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: tooltipPlugin },
+    scales: {
+      x: { stacked: true, grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: { stacked: true, grid: { color: gridColor() }, ticks: { color: tickColor(), callback: v => fmt(v) } }
+    }
+  }
+});
+
+// ============================================================
+// CHART 6 — Revenue
+// ============================================================
+new Chart(document.getElementById('chartRevenue'), {
+  type: 'bar',
+  data: {
+    labels: YEARS,
+    datasets: [{
+      label: 'Revenue $B',
+      data: REVENUE,
+      backgroundColor: REVENUE.map(v => v < 1 ? '#E24B4A' : v < 8 ? '#EF9F27' : '#1D9E75'),
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ' $' + ctx.raw + 'B' } } },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: { grid: { color: gridColor() }, ticks: { color: tickColor(), callback: v => '$' + v + 'B' } }
+    }
+  }
+});
+
+// ============================================================
+// CHART 7 — Jobs
+// ============================================================
+new Chart(document.getElementById('chartJobs'), {
+  type: 'bar',
+  data: {
+    labels: YEARS,
+    datasets: [{
+      label: 'Jobs',
+      data: JOBS,
+      backgroundColor: '#378ADD',
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ' ' + ctx.raw.toLocaleString() + ' jobs' } } },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: { grid: { color: gridColor() }, ticks: { color: tickColor(), callback: v => (v/1000).toFixed(0) + 'K' } }
+    }
+  }
+});
+
+// ============================================================
+// CHART 8 — Deaths
+// ============================================================
+new Chart(document.getElementById('chartDeaths'), {
+  type: 'bar',
+  data: {
+    labels: YEARS,
+    datasets: [{
+      label: 'Deaths',
+      data: DEATHS,
+      backgroundColor: DEATHS.map(v => v === 0 ? '#B4B2A9' : v > 100 ? '#E24B4A' : '#EF9F27'),
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + ' deaths' } } },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: { grid: { color: gridColor() }, ticks: { color: tickColor() } }
+    }
+  }
+});
+
+// ============================================================
+// CHART 9 — Deaths per 100K
+// ============================================================
+new Chart(document.getElementById('chartDeathsRate'), {
+  type: 'line',
+  data: {
+    labels: YEARS,
+    datasets: [{
+      label: 'Deaths per 100K',
+      data: DEATHS_RATE,
+      borderColor: '#E24B4A',
+      backgroundColor: 'rgba(226,75,74,0.07)',
+      fill: true,
+      tension: 0.35,
+      borderWidth: 2.5,
+      pointRadius: 5,
+      pointBackgroundColor: '#E24B4A',
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { tooltip: { callbacks: { label: ctx => ' ' + ctx.raw + ' per 100K pilgrims' } } },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: { grid: { color: gridColor() }, ticks: { color: tickColor(), callback: v => v + '/100K' } }
+    }
+  }
+});
+
+// ============================================================
+// CHART 10 — Forecast
+// ============================================================
+new Chart(document.getElementById('chartForecast'), {
+  type: 'line',
+  data: {
+    labels: YEARS_FULL,
+    datasets: [
+      {
+        label: 'Actual pilgrims',
+        data: [...PILGRIMS, null],
+        borderColor: '#1D9E75',
+        backgroundColor: 'rgba(29,158,117,0.07)',
+        fill: true,
+        tension: 0.3,
+        borderWidth: 2.5,
+        pointRadius: 5,
+        pointBackgroundColor: '#1D9E75',
+      },
+      {
+        label: 'Forecast point',
+        data: [null,null,null,null,null,null,1845045, 2100000],
+        borderColor: '#B4B2A9',
+        borderDash: [5,4],
+        fill: false,
+        tension: 0.3,
+        borderWidth: 2,
+        pointRadius: [0,0,0,0,0,0,0,6],
+        pointBackgroundColor: '#B4B2A9',
+      },
+      {
+        label: 'Forecast high',
+        data: [null,null,null,null,null,null,1845045, 2300000],
+        borderColor: 'rgba(180,178,169,0.4)',
+        borderDash: [3,4],
+        fill: false,
+        borderWidth: 1.5,
+        pointRadius: 0,
+      },
+      {
+        label: 'Forecast low',
+        data: [null,null,null,null,null,null,1845045, 1900000],
+        borderColor: 'rgba(180,178,169,0.4)',
+        borderDash: [3,4],
+        fill: '-1',
+        backgroundColor: 'rgba(180,178,169,0.08)',
+        borderWidth: 1.5,
+        pointRadius: 0,
+      },
+      {
+        label: '2019 baseline',
+        data: Array(8).fill(BASELINE),
+        borderColor: '#378ADD',
+        borderDash: [5,3],
+        fill: false,
+        borderWidth: 1.5,
+        pointRadius: 0,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      tooltip: { callbacks: { label: ctx => ctx.raw != null ? ' ' + fmt(ctx.raw) : '' } }
+    },
+    scales: {
+      x: { grid: { color: gridColor() }, ticks: { color: tickColor() } },
+      y: {
+        grid: { color: gridColor() },
+        ticks: { color: tickColor(), callback: v => fmt(v) }
+      }
+    }
+  }
+});
+
+// ============================================================
+// BUILD POLICY TIMELINE
+// ============================================================
+const tlContainer = document.getElementById('timeline-container');
+POLICY_DATA.forEach(p => {
+  const item = document.createElement('div');
+  item.className = 'timeline-item';
+  item.innerHTML = `
+    <div class="timeline-header">
+      <div class="timeline-dot" style="background:${p.color}"></div>
+      <span class="timeline-year">${p.year}</span>
+      <span class="timeline-phase-en" style="background:${p.color}22;color:${p.color}">${p.phase}</span>
+      <span class="timeline-toggle">+</span>
+    </div>
+    <div class="timeline-detail">
+      <div>
+        <div class="detail-field-label-en">Who was allowed / من يُسمح له</div>
+        <div class="detail-field-value">${p.who}</div>
+      </div>
+      <div>
+        <div class="detail-field-label-en">Age restriction / قيود السن</div>
+        <div class="detail-field-value">${p.age}</div>
+      </div>
+      <div>
+        <div class="detail-field-label-en">Vaccination / التطعيم</div>
+        <div class="detail-field-value">${p.vax}</div>
+      </div>
+      <div>
+        <div class="detail-field-label-en">International allowed / الدوليون مسموح</div>
+        <div class="detail-field-value">${p.intl}</div>
+      </div>
+      <div>
+        <div class="detail-field-label-en">Capacity cap / سقف السعة</div>
+        <div class="detail-field-value">${p.cap}</div>
+      </div>
+    </div>
+  `;
+  const toggle = item.querySelector('.timeline-toggle');
+  const detail = item.querySelector('.timeline-detail');
+  item.querySelector('.timeline-header').addEventListener('click', () => {
+    const open = detail.classList.toggle('open');
+    toggle.textContent = open ? '−' : '+';
+  });
+  tlContainer.appendChild(item);
+});
+
+// ============================================================
+// BUILD COUNTRIES — year switchable
+// ============================================================
+const COUNTRY_NOTES = {
+  '2017': '2017 — Normal year. Full international quotas. ~1,000 permits per million Muslims per country. / سنة طبيعية. حصص دولية كاملة.',
+  '2018': '2018 — Normal year. Same quota system in place. Slight variations from country to country. / سنة طبيعية. نفس نظام الحصص.',
+  '2019': '2019 — Pre-COVID peak. All quotas at full capacity. Last normal Hajj before the pandemic. / ذروة ما قبل كوفيد. آخر موسم حج طبيعي.',
+  '2020': '2020 — International suspended entirely. Only ~1,000 Saudi residents allowed. No country quotas. / تم تعليق الحصص الدولية كلياً. 1,000 مقيم سعودي فقط.',
+  '2021': '2021 — International suspended. 60,000 vaccinated Saudi nationals/residents only. No foreign pilgrims. / تعليق دولي. 60,000 سعودي ومقيم ملقح فقط.',
+  '2022': '2022 — International restored at ~50% quota. Vaccinated pilgrims under 65 only. / استعادة الحصص الدولية بنسبة ~50٪. ملقحون فقط أقل من 65 سنة.',
+  '2023': '2023 — All restrictions lifted. Full quotas restored. No age limits. / رُفعت جميع القيود. الحصص كاملة. لا حدود عمرية.',
+};
+
+const cContainer = document.getElementById('countries-container');
+const cNote = document.getElementById('country-year-note');
+
+function buildCountries(year) {
+  const data = COUNTRIES_BY_YEAR[year];
+  const maxN = data[0].n;
+  cContainer.innerHTML = '';
+  cNote.textContent = COUNTRY_NOTES[year];
+
+  // Special message for lockdown years
+  if (year === '2020' || year === '2021') {
+    const msg = document.createElement('div');
+    msg.style.cssText = 'padding:1.5rem;text-align:center;color:var(--text-tertiary);font-size:13px;line-height:1.8;';
+    msg.innerHTML = year === '2020'
+      ? '🔒 International pilgrim data not available for 2020.<br>Only ~1,000 Saudi residents were permitted.<br><span style="font-family:var(--font-arabic);direction:rtl;display:block;margin-top:6px">لا تتوفر بيانات دولية لعام 2020. سُمح لـ 1,000 مقيم سعودي فقط.</span>'
+      : '🔒 International pilgrim data not available for 2021.<br>60,000 vaccinated Saudi nationals & residents only.<br><span style="font-family:var(--font-arabic);direction:rtl;display:block;margin-top:6px">لا تتوفر بيانات دولية لعام 2021. 60,000 سعودي ومقيم ملقح فقط.</span>';
+    cContainer.appendChild(msg);
+    return;
+  }
+
+  data.forEach(c => {
+    const valStr = c.n >= 1000 ? (c.n/1000).toFixed(0)+'K' : c.n.toLocaleString();
+    const row = document.createElement('div');
+    row.className = 'country-row';
+    row.innerHTML = `
+      <span class="country-rank">${c.rank}</span>
+      <span class="country-flag">${c.flag}</span>
+      <span class="country-name-en">${c.en}</span>
+      <span class="country-name-ar">${c.ar}</span>
+      <div class="country-bar-bg">
+        <div class="country-bar-fill" style="width:${Math.round(c.n/maxN*100)}%;background:${c.color}"></div>
+      </div>
+      <span class="country-val">${valStr}</span>
+    `;
+    cContainer.appendChild(row);
+  });
+}
+
+// Year selector buttons
+document.querySelectorAll('[data-cyear]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-cyear]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    buildCountries(btn.dataset.cyear);
+  });
+});
+
+// Init with 2017
+buildCountries('2017');
+
+// ============================================================
+// BUILD REGIONS
+// ============================================================
+const rGrid = document.getElementById('region-grid');
+REGIONS_DATA.forEach(r => {
+  const card = document.createElement('div');
+  card.className = 'region-card';
+  card.innerHTML = `
+    <div class="region-pct" style="color:${r.color}">${r.pct}%</div>
+    <div class="region-name-en">${r.en}</div>
+    <div class="region-name-ar">${r.ar}</div>
+  `;
+  rGrid.appendChild(card);
+});
+
+// ============================================================
+// BUILD DEATHS ROWS
+// ============================================================
+const dContainer = document.getElementById('deaths-rows-container');
+DEATHS_INFO.forEach(d => {
+  const row = document.createElement('div');
+  row.className = 'deaths-row';
+  const col = d.deaths === 0 ? '#B4B2A9' : d.deaths > 100 ? '#E24B4A' : '#EF9F27';
+  row.innerHTML = `
+    <span class="deaths-year">${d.year}</span>
+    <span class="deaths-count" style="color:${col}">${d.deaths}</span>
+    <span class="deaths-info">${d.cause} — ${d.note}</span>
+  `;
+  dContainer.appendChild(row);
+});
+
+// ============================================================
+// TABS — scoped to tab-row only, not country year buttons
+// ============================================================
+document.querySelectorAll('.tab-row[role="tablist"] .tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-row[role="tablist"] .tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    const panel = document.getElementById('tab-' + btn.dataset.tab);
+    if (panel) panel.classList.add('active');
+  });
+});
+
+</script>
+</body>
+</html>
