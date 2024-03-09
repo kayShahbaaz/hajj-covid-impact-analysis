@@ -94,6 +94,12 @@ All numbers are cross-referenced across at least two sources where possible.
 
 ---
 
+# Live Demo
+
+🔗 [Hajj Pilgrimage: COVID-19 Impact Analysis](https://kayshahbaaz.github.io/hajj-covid-impact-analysis/)
+
+---
+
 ## Project structure / هيكل المشروع
 
 ```
