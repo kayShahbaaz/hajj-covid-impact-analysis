@@ -13,7 +13,7 @@ Then 2020 came. And only 1,000 people were allowed.
 
 That number stuck with me. I kept thinking about what that actually means — not just spiritually, but in terms of data. What does a 99.96% drop look like on a chart? How do you even measure the recovery from something like that? And how long does it take for something this massive to go back to normal?
 
-I'm not a professional analyst. I'm someone who got curious and decided to actually look at the numbers. This project is me trying to answer those questions properly — with real data, real SQL, and a dashboard I built myself.
+This get me curious and decided to actually look at the numbers. This project is me trying to answer those questions properly — with real data, SQL, and a dashboard.
 
 The data covers 2017 to 2023. I started in early 2024, so 2023 is the most recent complete season I had access to.
 
@@ -159,6 +159,6 @@ sqlite3 hajj.db < analysis/hajj_analysis.sql
 
 ---
 
-*This project was built for learning purposes. All data is publicly available from official sources cited above.*
+*This project is for learning purposes. All data is publicly available from official sources cited above.*
 
 
